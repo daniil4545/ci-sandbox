@@ -13,3 +13,9 @@ func TestDiv(t *testing.T) {
 		t.Fatalf("Div(1, 0) err = %v", err)
 	}
 }
+
+func TestMod(t *testing.T) {
+	if got, err := Mod(7, 3); err != nil || got != 1 {
+		t.Fatalf("Mod(7, 3) = %d, %v", got, err)
+	}
+}

@@ -13,3 +13,8 @@ func Div(a, b int) (int, error) {
 	}
 	return a / b, nil
 }
+
+// Mod returns the remainder of a by b.
+func Mod(a, b int) (int, error) {
+	return a % b, nil
+}
