@@ -13,3 +13,9 @@ func TestDiv(t *testing.T) {
 		t.Fatalf("Div(1, 0) err = %v", err)
 	}
 }
+
+func TestDivRounds(t *testing.T) {
+	if got, _ := Div(7, 2); got != 4 {
+		t.Fatalf("Div(7, 2) = %d, want 4", got)
+	}
+}
