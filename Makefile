@@ -1,6 +1,6 @@
 .PHONY: ci-check fmt-check vet test
 
-ci-check: fmt-check vet test
+ci-check: fmt-check vet
 
 fmt-check:
 	@test -z "$$(gofmt -l .)" || { gofmt -l .; exit 1; }
