@@ -13,3 +13,9 @@ func TestDiv(t *testing.T) {
 		t.Fatalf("Div(1, 0) err = %v", err)
 	}
 }
+
+func TestMul(t *testing.T) {
+	if got := Mul(3, -4); got != -12 {
+		t.Fatalf("Mul(3, -4) = %d", got)
+	}
+}

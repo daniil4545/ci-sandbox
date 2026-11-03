@@ -13,3 +13,8 @@ func Div(a, b int) (int, error) {
 	}
 	return a / b, nil
 }
+
+// Mul multiplies a by b.
+func Mul(a, b int) int {
+	return a * b
+}
