@@ -23,6 +23,7 @@ func Mod(a, b int) (int, error) {
 }
 
 // Gcd returns the greatest common divisor of a and b, never negative; Gcd(0, 0) is 0.
+// For math.MinInt the divisor does not fit in int and the result is not defined.
 func Gcd(a, b int) int {
 	for b != 0 {
 		a, b = b, a%b
