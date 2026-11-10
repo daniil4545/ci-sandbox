@@ -21,3 +21,16 @@ func Mod(a, b int) (int, error) {
 	}
 	return a % b, nil
 }
+
+// IsEven reports whether a divides by 2.
+func IsEven(a int) bool {
+	return remainder(a, 2) == 0
+}
+
+// remainder returns what is left of a divided by b, 0 for a zero b.
+func remainder(a, b int) int {
+	if b == 0 {
+		return 0
+	}
+	return a % b
+}
