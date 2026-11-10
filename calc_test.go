@@ -22,3 +22,14 @@ func TestMod(t *testing.T) {
 		t.Fatalf("Mod(1, 0) err = %v", err)
 	}
 }
+
+func TestIsEven(t *testing.T) {
+	for _, c := range []struct {
+		a    int
+		want bool
+	}{{4, true}, {7, false}, {0, true}, {-2, true}, {-3, false}} {
+		if got := IsEven(c.a); got != c.want {
+			t.Fatalf("IsEven(%d) = %v", c.a, got)
+		}
+	}
+}
