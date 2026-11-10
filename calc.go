@@ -21,3 +21,18 @@ func Mod(a, b int) (int, error) {
 	}
 	return a % b, nil
 }
+
+// ErrEmpty is returned when there are no values.
+var ErrEmpty = errors.New("no values")
+
+// Avg returns the mean of xs rounded toward zero.
+func Avg(xs ...int) (int, error) {
+	if len(xs) == 0 {
+		return 0, ErrEmpty
+	}
+	sum := 0
+	for i := 1; i < len(xs); i++ {
+		sum += xs[i]
+	}
+	return sum / len(xs), nil
+}
