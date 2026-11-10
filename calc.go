@@ -21,3 +21,8 @@ func Mod(a, b int) (int, error) {
 	}
 	return a % b, nil
 }
+
+// Clamp limits v to the range from lo to hi.
+func Clamp(v, lo, hi int) int {
+	return min(max(v, lo), hi)
+}
