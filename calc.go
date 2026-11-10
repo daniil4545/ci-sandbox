@@ -21,3 +21,14 @@ func Mod(a, b int) (int, error) {
 	}
 	return a % b, nil
 }
+
+// Gcd returns the greatest common divisor of a and b, never negative; Gcd(0, 0) is 0.
+func Gcd(a, b int) int {
+	for b != 0 {
+		a, b = b, a%b
+	}
+	if a < 0 {
+		return -a
+	}
+	return a
+}
