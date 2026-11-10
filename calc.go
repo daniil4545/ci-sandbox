@@ -13,3 +13,11 @@ func Div(a, b int) (int, error) {
 	}
 	return a / b, nil
 }
+
+// Mod returns the remainder of a divided by b.
+func Mod(a, b int) (int, error) {
+	if b == 0 {
+		return 0, ErrDivZero
+	}
+	return a % b, nil
+}
