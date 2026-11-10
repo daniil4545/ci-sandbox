@@ -22,3 +22,9 @@ func TestMod(t *testing.T) {
 		t.Fatalf("Mod(1, 0) err = %v", err)
 	}
 }
+
+func TestMax(t *testing.T) {
+	if got := Max(3, 3); got != 3 {
+		t.Fatalf("Max(3, 3) = %d", got)
+	}
+}
