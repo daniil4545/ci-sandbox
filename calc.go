@@ -21,3 +21,8 @@ func Mod(a, b int) (int, error) {
 	}
 	return a % b, nil
 }
+
+// Neg returns a with the opposite sign.
+func Neg(a int) int {
+	return -a
+}

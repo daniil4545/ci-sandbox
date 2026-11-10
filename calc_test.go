@@ -22,3 +22,22 @@ func TestMod(t *testing.T) {
 		t.Fatalf("Mod(1, 0) err = %v", err)
 	}
 }
+
+func TestNeg(t *testing.T) {
+	tests := []struct {
+		name string
+		a    int
+		want int
+	}{
+		{"positive", 5, -5},
+		{"negative", -5, 5},
+		{"zero", 0, 0},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := Neg(tt.a); got != tt.want {
+				t.Fatalf("Neg(%d) = %d, want %d", tt.a, got, tt.want)
+			}
+		})
+	}
+}
