@@ -22,3 +22,17 @@ func TestMod(t *testing.T) {
 		t.Fatalf("Mod(1, 0) err = %v", err)
 	}
 }
+
+func TestAbs(t *testing.T) {
+	for _, c := range []struct{ a, want int }{{5, 5}, {-5, 5}, {0, 0}} {
+		if got := Abs(c.a); got != c.want {
+			t.Fatalf("Abs(%d) = %d", c.a, got)
+		}
+	}
+}
+
+func TestNeg(t *testing.T) {
+	if Neg(3) != -3 || Neg(-3) != 3 || Neg(0) != 0 {
+		t.Fatal("Neg changes the sign")
+	}
+}
