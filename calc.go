@@ -21,3 +21,8 @@ func Mod(a, b int) (int, error) {
 	}
 	return a % b, nil
 }
+
+// Sub returns a minus b.
+func Sub(a, b int) int {
+	return a - b
+}

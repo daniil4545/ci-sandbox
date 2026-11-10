@@ -22,3 +22,11 @@ func TestMod(t *testing.T) {
 		t.Fatalf("Mod(1, 0) err = %v", err)
 	}
 }
+
+func TestSub(t *testing.T) {
+	for _, c := range []struct{ a, b, want int }{{7, 2, 5}, {2, 7, -5}, {0, 0, 0}, {-3, -4, 1}} {
+		if got := Sub(c.a, c.b); got != c.want {
+			t.Fatalf("Sub(%d, %d) = %d, want %d", c.a, c.b, got, c.want)
+		}
+	}
+}
