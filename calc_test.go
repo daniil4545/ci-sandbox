@@ -22,3 +22,11 @@ func TestMod(t *testing.T) {
 		t.Fatalf("Mod(1, 0) err = %v", err)
 	}
 }
+
+func TestGcd(t *testing.T) {
+	for _, c := range []struct{ a, b, want int }{{12, 18, 6}, {18, 12, 6}, {-12, 18, 6}, {12, -18, 6}, {7, 0, 7}, {0, -7, 7}, {0, 0, 0}, {17, 5, 1}} {
+		if got := Gcd(c.a, c.b); got != c.want {
+			t.Fatalf("Gcd(%d, %d) = %d, want %d", c.a, c.b, got, c.want)
+		}
+	}
+}
